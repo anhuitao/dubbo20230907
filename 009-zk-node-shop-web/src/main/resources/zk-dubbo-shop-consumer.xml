@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <dubbo:application name="009-node-shop-web"/>
+
+    <!--注册中心-->
+    <dubbo:registry address="zookeeper://192.168.253.142:2181" check="false"/>
+<!--    <dubbo:registry address="zookeeper://127.0.0.1:2181" check="false"/>-->
+
+<!--        <dubbo:reference-->
+<!--                id="remoteUserInfoService"-->
+<!--                interface="com.iflytek.dubbo.service.UserInfoService"/>-->
+<!--    -->
+
+<!--    <dubbo:reference-->
+<!--            id="remoteOrderService"-->
+<!--            interface="com.iflytek.dubbo.service.OrderService"-->
+<!--            check="false"/>-->
+
+
+    <dubbo:reference
+            id="remoteUserInfoService"
+            interface="com.iflytek.dubbo.service.UserInfoService"
+            version="1.2"/>
+
+
+    <dubbo:reference
+            id="remoteUserInfoService2"
+            interface="com.iflytek.dubbo.service.UserInfoService"
+            version="2.2"/>
+
+
+
+    <dubbo:reference
+            id="remoteOrderService"
+            interface="com.iflytek.dubbo.service.OrderService"
+            check="false"  retries="3"  timeout="20000"/>
+
+    <bean id="shopServiceImpl" class="com.iflytek.dubbo.service.Impl.ShopServiceImpl">
+        <property name="orderService" ref="remoteOrderService"/>
+        <property name="userInfoService" ref="remoteUserInfoService"/>
+        <property name="userInfoService2" ref="remoteUserInfoService2"/>
+    </bean>
+</beans>

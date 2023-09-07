@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/001-link-main-web/001-link-main-web.iml" filepath="$PROJECT_DIR$/001-link-main-web/001-link-main-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/001-link-order-service-provider/001-link-order-service-provider.iml" filepath="$PROJECT_DIR$/001-link-order-service-provider/001-link-order-service-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/005-link-main-web/005-link-main-web.iml" filepath="$PROJECT_DIR$/005-link-main-web/005-link-main-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/005-link-order-interface/005-link-order-interface.iml" filepath="$PROJECT_DIR$/005-link-order-interface/005-link-order-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/005-link-order-service-provider/005-link-order-service-provider.iml" filepath="$PROJECT_DIR$/005-link-order-service-provider/005-link-order-service-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/007-node-shop-interface/007-node-shop-interface.iml" filepath="$PROJECT_DIR$/007-node-shop-interface/007-node-shop-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/007-node-shop-order-service/007-node-shop-order-service.iml" filepath="$PROJECT_DIR$/007-node-shop-order-service/007-node-shop-order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/007-node-shop-user-service/007-node-shop-user-service.iml" filepath="$PROJECT_DIR$/007-node-shop-user-service/007-node-shop-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/007-node-shop-web/007-node-shop-web.iml" filepath="$PROJECT_DIR$/007-node-shop-web/007-node-shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/009-zk-node-shop-order-service/009-zk-node-shop-order-service.iml" filepath="$PROJECT_DIR$/009-zk-node-shop-order-service/009-zk-node-shop-order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/009-zk-node-shop-user-service/009-zk-node-shop-user-service.iml" filepath="$PROJECT_DIR$/009-zk-node-shop-user-service/009-zk-node-shop-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/009-zk-node-shop-web/009-zk-node-shop-web.iml" filepath="$PROJECT_DIR$/009-zk-node-shop-web/009-zk-node-shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo.iml" filepath="$PROJECT_DIR$/dubbo.iml" />
+    </modules>
+  </component>
+</project>

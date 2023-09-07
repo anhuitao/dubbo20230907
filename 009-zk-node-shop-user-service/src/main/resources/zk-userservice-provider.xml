@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--定义服务项目名称：唯一  dubbo服务器内部通过不同项目名称 区分不同项目-->
+    <dubbo:application name="009-zk-node-shop-user-service"/>
+
+    <!--    指定注册zookeeper-->
+    <dubbo:registry address="zookeeper://192.168.253.142:2181" check="false"/>
+<!--    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>-->
+
+    <!--    定义协议端口号-->
+    <dubbo:protocol name="dubbo" port="20881"/>
+
+    <!--    暴露服务-->
+    <dubbo:service interface="com.iflytek.dubbo.service.UserInfoService" ref="userServiceImpl" version="1.2"/>
+    <dubbo:service interface="com.iflytek.dubbo.service.UserInfoService" ref="userServiceImpl2" version="2.2"/>
+
+    <!--    服务的bean对象-->
+    <bean id="userServiceImpl" class="com.iflytek.dubbo.service.Impl.UserInfoServiceImpl"/>
+    <bean id="userServiceImpl2" class="com.iflytek.dubbo.service.Impl.UserInfoServiceImpl2"/>
+</beans>

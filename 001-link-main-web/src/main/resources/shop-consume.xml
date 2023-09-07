@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+    <!--    这是dubbo服务端 的   配置文件-->
+    <!--    服务提供者必须声明名称：必须保证服务名称的唯一性，他的名称是dubbo内部使用的唯一标识-->
+    <dubbo:application name="link-main-web"/>
+    <!--暴露服务接口-》dubbo:service
+    interface:暴露服务接口的全限定名称
+    ref:接口引用的实现类在spring容器中的标识
+    registry:如果不使用注册中心，ze值为N/A-->
+    <dubbo:reference
+            id="remoteOrderService"
+            interface="com.iflytek.dubbo.service.OrderService"
+            url="dubbo://localhost:20880"
+            registry="N/A"/>
+
+
+    <!--    setter注入   加载Bean对象-->
+    <bean id="shopService" class="com.iflytek.dubbo.service.Impl.shopServiceImpl">
+        <property name="orderService" ref="remoteOrderService"/>
+    </bean>
+    <!--    构造注入    加载Bean对象-->
+    <!--<bean id="shopService" class="com.iflytek.dubbo.service.Impl.shopServiceImpl">
+       <constructor-arg index="0" ref="remoteOrderService"/>
+    </bean>-->
+</beans>
+
+
+

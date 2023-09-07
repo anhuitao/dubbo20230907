@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="009-zk-node-shop-user-service:war">
+    <output-path>$PROJECT_DIR$/009-zk-node-shop-user-service/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>009-zk-node-shop-user-service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="009-zk-node-shop-user-service.war">
+      <element id="artifact" artifact-name="009-zk-node-shop-user-service:war exploded" />
+    </root>
+  </artifact>
+</component>

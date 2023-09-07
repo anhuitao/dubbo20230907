@@ -1,0 +1,45 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"-->
+<!--       xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">-->
+
+<!--    <dubbo:application name="007-node-shop-web"></dubbo:application>-->
+
+<!--    &lt;!&ndash;注册中心&ndash;&gt;-->
+<!--    <dubbo:registry address="zookeeper://192.168.149.128:2181" check="false"></dubbo:registry>-->
+
+
+<!--    <dubbo:reference-->
+<!--            id="remoteUserInfoService"-->
+<!--            interface="com.bjpowernode.dubbo.service.UserInfoService"-->
+
+<!--            version="1.2.1"-->
+<!--    />-->
+
+
+<!--    <dubbo:reference-->
+<!--            id="remoteUserInfoService2"-->
+
+<!--            interface="com.bjpowernode.dubbo.service.UserInfoService"-->
+<!--            version="2.2.2"-->
+<!--    />-->
+
+
+
+<!--    <dubbo:reference-->
+<!--            id="remoteOrderService"-->
+
+<!--            interface="com.bjpowernode.dubbo.service.OrderService"-->
+
+<!--            check="false"  retries="3"  timeout="20000"-->
+
+<!--    />-->
+
+<!--    <bean id="shopServiceImpl" class="com.bjpowernode.dubbo.service.ShopServiceImpl">-->
+<!--        <property name="orderService" ref="remoteOrderService"></property>-->
+<!--        <property name="userInfoService" ref="remoteUserInfoService"></property>-->
+<!--        <property name="userInfoService2" ref="remoteUserInfoService2"></property>-->
+<!--    </bean>-->
+<!--</beans>-->

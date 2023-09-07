@@ -1,0 +1,13 @@
+# Project exclude paths
+/001-link-main-web/target/
+/001-link-order-service-provider/target/
+/005-link-main-web/target/
+/005-link-order-interface/target/
+/005-link-order-service-provider/target/
+/007-node-shop-interface/target/
+/007-node-shop-order-service/target/
+/007-node-shop-user-service/target/
+/007-node-shop-web/target/
+/009-zk-node-shop-order-service/target/
+/009-zk-node-shop-user-service/target/
+/009-zk-node-shop-web/target/
